@@ -23,7 +23,11 @@ from django.conf.urls.static import static
 from portfolio_site.core import views as core_views
 
 urlpatterns = [
-    path("", core_views.portfolio_view),
+    path("", core_views.portfolio_view, name="portfolio"),
+    path("about/", core_views.about_view, name="about"),
+    path("skills/", core_views.skills_view, name="skills"),
+    path("projects/", core_views.projects_view, name="projects"),
+    path("contact/", core_views.contact_view, name="contact"),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

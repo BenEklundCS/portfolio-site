@@ -1,8 +1,12 @@
-body {
+/* Ensure the body takes up full height */
+html, body {
+    height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Top Bar Styles */
 .top-bar {
     background-color: #111;
     color: #fff;
@@ -36,16 +40,26 @@ body {
     color: #50b3f4;
 }
 
+/* Ensure the main content takes up the remaining space */
 main {
-    padding: 20px;
+    flex: 1;
+    padding: 20px; /* Add padding to ensure the footer does not overlap */
 }
 
+/* Footer styling */
 footer {
-    background-color: #111;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    padding: 10px 0;
+    position: relative;
     width: 100%;
+}
+
+div {
+    background-color: #111;
+}
+
+p {
+    background-color: #111;
 }

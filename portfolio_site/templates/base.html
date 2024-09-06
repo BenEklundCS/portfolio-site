@@ -14,17 +14,16 @@
             <a href="/">Benjamin Eklund</a>
         </div>
         <ul class="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'skills' %}">Skills</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Main Content Area -->
     <main>
         {% block content %}
-
         {% endblock %}
     </main>
 

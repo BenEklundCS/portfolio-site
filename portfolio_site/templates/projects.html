@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="projects-section">
+    <h2>Projects</h2>
+    
+    <!-- The Land of Boars Project -->
+    <section>
+        <h3>The Land of Boars (Platformer Game in C++ with Raylib)</h3>
+        <p><strong>Description:</strong></p>
+        <p>
+            <em>The Land of Boars</em> is a 2D platformer game built in C++ using the Raylib library. This project involves implementing various game mechanics, including player movement, collision detection, animation handling, and sound management, all organized through Object-Oriented Programming (OOP) principles.
+        </p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Developed complex game logic for player actions and interactions with the environment.</li>
+            <li>Implemented a custom renderer for background and game object rendering.</li>
+            <li>Integrated a sound manager for handling in-game sounds.</li>
+            <li>Used design patterns like the <strong>Observer pattern</strong> for event handling and <strong>Command pattern</strong> for input management.</li>
+            <li>Focused on performance optimization, including parallelizing update loops for improved gameplay experience.</li>
+        </ul>
+        <p><strong>Skills and Technologies:</strong></p>
+        <ul>
+            <li><strong>Languages/Tools:</strong> C++, Raylib, Visual Studio/CLion</li>
+            <li><strong>Key Concepts:</strong> OOP, game physics, event-driven programming, performance optimization</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Slconwaysgol Project -->
+    <section>
+        <h3>Slconwaysgol (Conway’s Game of Life in Java with LWJGL)</h3>
+        <p><strong>Description:</strong></p>
+        <p>
+            <em>Slconwaysgol</em> is a personal interpretation of Conway's Game of Life, implemented in Java using the <strong>Lightweight Java Game Library (LWJGL)</strong>. While originally a class project, it was extended and optimized for enhanced performance and graphical display.
+        </p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Designed a flexible simulation engine that handles Conway's rules efficiently, even with large grids.</li>
+            <li>Used <strong>LWJGL</strong> for rendering the grid and updating the simulation in real-time.</li>
+            <li>Implemented user interactions to modify grid states, allowing for dynamic game environments.</li>
+            <li>Focused on optimizing grid updates to ensure minimal computational load during complex transitions.</li>
+        </ul>
+        <p><strong>Skills and Technologies:</strong></p>
+        <ul>
+            <li><strong>Languages/Tools:</strong> Java, LWJGL</li>
+            <li><strong>Key Concepts:</strong> Cellular automata, real-time rendering, user interaction, game loop optimization</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Health Geo Project -->
+    <section>
+        <h3>Health Geo Project for State of California (Senior Project)</h3>
+        <p><strong>Description:</strong></p>
+        <p>
+            This project is part of a broader effort to map and analyze health data across various geographic locations in California. The goal is to develop a system that helps visualize public health trends and provide insights that could inform state policies.
+        </p>
+        <p><strong>Key Features (Planned):</strong></p>
+        <ul>
+            <li>Design and implement a web-based system for displaying health data trends using geographic mapping.</li>
+            <li>Work with government-provided health data to create meaningful visualizations, highlighting trends and disparities across regions.</li>
+            <li>Collaborate with a team of students to manage the project lifecycle, from requirements gathering to deployment.</li>
+            <li>Ensure data integrity and privacy while handling sensitive health information.</li>
+        </ul>
+        <p><strong>Skills and Technologies (Planned):</strong></p>
+        <ul>
+            <li><strong>Languages/Tools:</strong> Python (or JavaScript), Django, SQL, Map APIs</li>
+            <li><strong>Key Concepts:</strong> Data visualization, geospatial analysis, full-stack development, team collaboration</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h3>Summary</h3>
+        <p>Each project is crafted to emphasize my skills in 
+            game development, 
+            real-time systems, and 
+            full-stack development. 
+            As I complete the Health Geo project, I will gain further hands-on experience with geospatial 
+            tools and backend systems, preparing me for software engineering roles in both private and public sectors.
+        </p>
+        
+    </section>
+
+    <hr>
+    
+</div>
+{% endblock %}
