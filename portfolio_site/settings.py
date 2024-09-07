@@ -130,7 +130,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "portfolio_site" / "static",
 ]
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "portfolio_site" / "staticfiles"
 
 MEDIA_URL = "media/"
