@@ -27,7 +27,7 @@ SECRET_KEY = config("SECRET_KEY", default='my_key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=True)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*').split(',')
 
 if 'CODESPACE_NAME' in os.environ:
     codespace_name = config("CODESPACE_NAME")

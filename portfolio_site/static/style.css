@@ -1,82 +1,136 @@
-/* Ensure the body takes up full height */
+/* debug mode */
 
+* {
+    border: 2px solid red;
+}
+
+/* Global Styles */
 html, body {
     height: 100%;
     margin: 0;
-    padding: 0; 
+    padding: 0;
     display: flex;
     flex-direction: column;
-
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(270deg, #5b2c83, #383a8a, #385988, #535fbd); /* Gradient background */
+    background-size: 600% 600%;
+    animation: gradientShift 60s ease infinite;
 }
 
-hr {
-    width: 100%;
+.tealText {
+    color: #50b3f4; /* Teal text color */
+}
+
+/* Animation for shifting gradient */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Top Bar Styles */
 .top-bar {
-    background-color: #111;
     color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
     align-items: center;
+    width: 100%;
+    max-width: 100vw; /* Prevent the top bar from overflowing */
+    position: fixed; /* Fixed on scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-sizing: border-box; /* Ensure padding is accounted for */
+    overflow-x: hidden;
 }
 
 .top-bar .logo a {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.top-bar .logo a:hover {
+    color: #50b3f4; /* Teal hover color */
 }
 
 .top-bar .menu {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-left: 1rem;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .top-bar .menu li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
+    white-space: nowrap; /* Prevent wrapping of individual items */
+    transition: color 0.3s ease;
 }
 
 .top-bar .menu li a:hover {
-    color: #50b3f4;
+    color: #50b3f4; /* Teal hover color */
 }
 
-/* Ensure the main content takes up the remaining space */
+/* Main Content Area */
 main {
     flex: 1;
-    padding: 20px; /* Add padding to ensure the footer does not overlap */
-    background-color: #111; /* Match background to ensure no grey area */
+    padding: 100px 20px; /* Prevent overlap with the fixed navbar */
+    background: transparent;
 }
 
-/* Footer styling */
+/* Footer Styling */
 footer {
-    background-color: #111; /* Darker background for better contrast */
-    color: #ccc; /* Softer color for text */
+    color: #ccc;
     text-align: center;
-    padding: 15px 0; /* Add some padding for spacing */
-    font-family: 'Arial', sans-serif; /* Change font for a cleaner look */
-    font-size: 14px; /* Adjust font size */
-    border-top: 2px solid #555; /* Optional border for a more defined footer */
+    padding: 15px 0;
+    font-size: 14px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
-    margin: 0; /* Ensure no margin around the footer */
+    position: relative;
+    z-index: 10; /* Keep above other content */
 }
 
-/* Remove extra spacing and ensure the footer is flush with the bottom */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+/* Divider (hr) Styling */
+hr {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: #555;
+    margin: 20px 0;
 }
 
-div, p {
-    margin: 0;
-    padding: 0;
-    background-color: #111; /* Ensure no grey background shows */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-bar .menu {
+        display: none; /* Hide the menu on smaller screens */
+    }
+    
+    .top-bar {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 80px 10px; /* Adjust padding on smaller screens */
+    }
+}
+
+@media (max-width: 1200px) {
+    .top-bar .menu li a {
+        font-size: 0.9rem;
+    }
 }

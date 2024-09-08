@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def portfolio_view(request):
     #projects = Project.objects.all()
-    return render(request, 'base.html')
+    return render(request, 'home.html')
 
 def about_view(request):
     return render(request, 'about.html')
