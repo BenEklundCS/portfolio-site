@@ -2,78 +2,69 @@
 /* Main Content */
 main {
     flex: 1;
-    padding: 75px 20px 0px; /* Reduce the top padding from 150px to 100px */
+    padding: 75px 20px 0px; /* Reduce the top padding from 150px to 75px */
     background: transparent;
 }
 
-
+/* Skills Section */
 .skills-section {
     margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background like the about-card */
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     color: #fff;
-    animation: flyInDown 1s ease-out; /* Add animation */
+    animation: flyInDown 1s ease-out;
+    max-width: 1200px; /* Added max-width for consistency */
 }
 
 .skills-section h2, .skills-section h3 {
     color: #50b3f4;
-    margin-bottom: 15px;
-    font-size: 2.5rem; /* Larger subheadings */
+    margin-bottom: 10px;
+    font-size: 1.8rem; /* Consistent font size */
 }
 
 .skills-section ul {
-    list-style: none;
+    list-style: disc inside; /* Use default bullet style with alignment */
     padding: 0;
-    margin-bottom: 20px; /* Space between each section */
- }
-
-.skills-section h3 {
-    margin-top: 30px; /* Give more breathing room above each section */
+    margin-bottom: 15px; /* Reduced margin for tighter spacing */
 }
 
-.skills-section p {
-    font-size: 1.1rem; /* A little smaller for normal text */
+.skills-section h3 {
+    margin-top: 20px; /* Slightly reduce space above each section */
+}
+
+.skills-section p, .skills-section li {
+    font-size: 1rem; /* Reduced font size for text */
+    padding-left: 15px; /* Adjusted padding for alignment */
 }
 
 .skills-section li {
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-    padding-left: 25px;
-    position: relative;
+    margin-bottom: 10px; /* Add some space between list items */
+    line-height: 1.5; /* Improve readability of list items */
 }
- 
+
 /* Hover effect for the card */
 .skills-section:hover {
     transform: translateY(-5px); /* Slight hover lift */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 
+/* Removed custom bullet before element for a cleaner look */
 .skills-section li::before {
-    content: "•";
-    color: #50b3f4;
-    position: absolute;
-    left: 0;
-    font-size: 1.5rem;
-    line-height: 1;
+    content: none; /* Remove the custom bullet points */
 }
 
-.skills-section, .education-section, .certifications-section {
-    padding: 50px;
-}
-
-/* Responsive design */
+/* Responsive styling */
 @media (max-width: 768px) {
     .skills-section {
-        padding: 15px 20px;
+        padding: 15px 20px; /* Adjust padding for smaller screens */
     }
 
     .skills-section h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Reduce heading size on smaller screens */
     }
 
-    .skills-section li {
-        font-size: 1rem;
+    .skills-section p, .skills-section li {
+        font-size: 0.9rem; /* Adjust text size for readability on smaller screens */
     }
 }
-
