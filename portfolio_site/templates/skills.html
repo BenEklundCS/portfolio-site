@@ -10,45 +10,51 @@
 {% endblock %}
 
 {% block content %}
-<div class="skills-section" class="disable-scroll">
-    <h3>Technical Skills</h3>
+<div class="skills-container">
+    <div class="skills-card">
+        <h3>Technical Skills</h3>
     
-    <p>With a strong foundation in software engineering and hands-on experience across various domains, I’ve cultivated a diverse technical skill set that enables me to solve complex problems efficiently. Below is a detailed summary of my technical expertise:</p>
+        <p>With a strong foundation in software engineering and hands-on experience across various domains, I’ve cultivated a diverse technical skill set that enables me to solve complex problems efficiently. Below is a detailed summary of my technical expertise:</p>
 
-    <ul>
-        <li><strong>Programming Languages:</strong> C, C++, Java, Python, JavaScript, R - Applied in a variety of contexts, including game development, academic projects, and real-world troubleshooting of SCADA systems with Ignition.</li>
-        
-        <li><strong>Game Development:</strong> Raylib, LWJGL - Developed a 2D platformer featuring optimized collision detection, sound integration, and multi-threaded update loops for enhanced performance.</li>
-        
-        <li><strong>Web Development:</strong> HTML, CSS, Django, React, TypeScript - Built and maintained dynamic web applications, including my portfolio, leveraging front-end frameworks and back-end API integrations.</li>
-        
-        <li><strong>Database Management:</strong> SQL, PostgreSQL, SQLite - Experienced in database schema design, query optimization, setting up databases for production environments, and troubleshooting them in real-time applications.</li>
-        
-        <li><strong>Tools and Platforms:</strong> Git, GitHub, Docker, AWS (basics) - Proficient in version control, containerization using Docker, and deploying cloud services using AWS for scalable and secure environments.</li>
-        
-        <li><strong>SCADA Systems:</strong> Ignition by Inductive Automation - Provided technical support and troubleshooting for industrial automation systems, specializing in resolving performance bottlenecks and optimizing system configurations.</li>
-    </ul>
+        <ul>
+            <li><strong>Programming Languages:</strong> C, C++, Java, Python, JavaScript, R - Applied in a variety of contexts, including game development, academic projects, and real-world troubleshooting of SCADA systems with Ignition.</li>
+            
+            <li><strong>Game Development:</strong> Raylib, LWJGL - Developed a 2D platformer featuring optimized collision detection, sound integration, and multi-threaded update loops for enhanced performance.</li>
+            
+            <li><strong>Web Development:</strong> HTML, CSS, Django, React, TypeScript - Built and maintained dynamic web applications, including my portfolio, leveraging front-end frameworks and back-end API integrations.</li>
+            
+            <li><strong>Database Management:</strong> SQL, PostgreSQL, SQLite - Experienced in database schema design, query optimization, setting up databases for production environments, and troubleshooting them in real-time applications.</li>
+            
+            <li><strong>Tools and Platforms:</strong> Git, GitHub, Docker, AWS (basics) - Proficient in version control, containerization using Docker, and deploying cloud services using AWS for scalable and secure environments.</li>
+            
+            <li><strong>SCADA Systems:</strong> Ignition by Inductive Automation - Provided technical support and troubleshooting for industrial automation systems, specializing in resolving performance bottlenecks and optimizing system configurations.</li>
+        </ul>
+    </div>
 
-    <h3>Education</h3>
-    <p>Almost finished with my B.S. in Computer Science from California State University, Sacramento. In addition to my core coursework, I’ve focused my studies in the following areas:</p>
-    <ul>
-        <li><strong>Software Engineering</strong> - Comprehensive understanding of the software development lifecycle, including requirements gathering, system design, implementation, testing, and continuous integration/maintenance.</li>
+    <div class="education-card">
+        <h3>Education</h3>
+        <p>Almost finished with my B.S. in Computer Science from California State University, Sacramento. In addition to my core coursework, I’ve focused my studies in the following areas:</p>
+        <ul>
+            <li><strong>Software Engineering</strong> - Comprehensive understanding of the software development lifecycle, including requirements gathering, system design, implementation, testing, and continuous integration/maintenance.</li>
         
-        <li><strong>Advanced Algorithm Design and Analysis</strong> - Gained proficiency in algorithmic concepts, such as dynamic programming, greedy methods, recurrence relations, NP-completeness, and other foundational principles in theoretical computer science.</li>
+            <li><strong>Advanced Algorithm Design and Analysis</strong> - Gained proficiency in algorithmic concepts, such as dynamic programming, greedy methods, recurrence relations, NP-completeness, and other foundational principles in theoretical computer science.</li>
         
-        <!-- Uncomment after completing courses
-        <li><strong>Computational Biology</strong> - Analyzed genome sequences and other biological data using R, understanding the intersection of computer science and biology.</li>
-        <li><strong>Blockchain</strong> - Developed decentralized applications (DApps) on the Ethereum network using Solidity, focusing on smart contract design and implementation.</li> 
-        -->
+            <!-- Uncomment after completing courses
+            <li><strong>Computational Biology</strong> - Analyzed genome sequences and other biological data using R, understanding the intersection of computer science and biology.</li>
+            <li><strong>Blockchain</strong> - Developed decentralized applications (DApps) on the Ethereum network using Solidity, focusing on smart contract design and implementation.</li> 
+            -->
         
-        <li><strong>Game Development</strong> - Acquired knowledge in game design principles, physics engines, and game architecture, culminating in the development of <em>SlConwaysGoL</em>—a project combining cellular automata and game mechanics.</li>
-    </ul>
+            <li><strong>Game Development</strong> - Acquired knowledge in game design principles, physics engines, and game architecture, culminating in the development of <em>SlConwaysGoL</em>—a project combining cellular automata and game mechanics.</li>
+        </ul>
+    </div>
 
-    <h3>Certifications</h3>
-    <ul>
-        <li><strong>Ignition Gold Certification</strong> - Demonstrated proficiency in using the Ignition platform for SCADA systems in industrial environments.</li>
-        
-        <li><strong>AWS Technical Essentials</strong> - Acquired foundational knowledge in AWS cloud infrastructure, including EC2, S3, and IAM, to deploy scalable applications.</li>
-    </ul>
+    <div class="certifications-card">
+        <h3>Certifications</h3>
+        <ul>
+            <li><strong>Ignition Gold Certification</strong> - Demonstrated proficiency in using the Ignition platform for SCADA systems in industrial environments.</li>
+            <li><strong>AWS Technical Essentials</strong> - Acquired foundational knowledge in AWS cloud infrastructure, including EC2, S3, and IAM, to deploy scalable applications.</li>
+        </ul>
+    </div>
 </div>
 {% endblock %}
+
