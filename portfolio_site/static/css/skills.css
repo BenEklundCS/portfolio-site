@@ -46,37 +46,44 @@
 
 /* List Styling */
 .skills-card ul, .education-card ul, .certifications-card ul {
-    list-style: disc outside; /* Change from 'inside' to 'outside' */
-    padding-left: 20px; /* Adjust padding-left to move bullets closer to the text */
+    list-style: disc outside;
+    padding-left: 20px;
     margin-bottom: 15px;
 }
 
 .skills-card li, .education-card li, .certifications-card li {
     font-size: 1rem;
     margin-bottom: 10px;
-    padding-left: 0; /* Remove padding from list items */
+    padding-left: 0;
 }
 
+/* Hover effect for the cards */
+.skills-card:hover, .certifications-card:hover, .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .skills-container {
-        grid-template-columns: 1fr; /* Stack cards in one column for smaller screens */
-    }
-
-    .skills-card, .education-card, .certifications-card {
-        padding: 20px;
+        grid-template-columns: 1fr; /* Stack everything in one column */
+        grid-template-rows: auto;
+        max-width: 100%; /* Ensure it fits smaller screens */
+        padding: 15px;
     }
 
     .skills-card {
-        grid-row: 1 / 2; /* Adjust grid row for mobile */
+        grid-column: 1 / 2; /* Full width for the skills card */
+        grid-row: 1 / 2; /* First position */
     }
 
     .education-card {
-        grid-row: 2 / 3; /* Adjust grid row for mobile */
+        grid-column: 1 / 2; /* Full width for the education card */
+        grid-row: 2 / 3; /* Second position */
     }
 
     .certifications-card {
-        grid-row: 3 / 4; /* Adjust grid row for mobile */
+        grid-column: 1 / 2; /* Full width for the certifications card */
+        grid-row: 3 / 4; /* Third position */
     }
 }

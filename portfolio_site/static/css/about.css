@@ -83,7 +83,7 @@
 }
 
 /* Hover effect for the cards */
-.about-card:hover, .fun-facts-card:hover {
+.about-card:hover, .fun-facts-card:hover, .profile-pic-card:hover {
     transform: translateY(-5px); /* Slight hover lift */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
