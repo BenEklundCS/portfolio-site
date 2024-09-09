@@ -4,8 +4,13 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <title>{% block title %}Ben's Portfolio{% endblock %}</title>
+    
+    <!-- Load default styles (common styles for all pages) -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+    <!-- Allow child templates to load additional CSS here -->
+    {% block head %}{% endblock %}
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -13,19 +18,19 @@
         <div class="logo">
             <a href="/">// Ben </a>
         </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <ul class="menu">
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'skills' %}">Skills</a></li>
             <li><a href="{% url 'projects' %}">Projects</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
-
-
     </nav>
+
     <!-- Main Content Area -->
     <main>
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
 
     <!-- Footer -->

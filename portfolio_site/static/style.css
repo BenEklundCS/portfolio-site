@@ -1,7 +1,3 @@
-/* debug mode */
-
-
-
 /* Global Styles */
 html, body {
     height: 100%;
@@ -12,14 +8,40 @@ html, body {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    background: linear-gradient(270deg, #5b2c83, #383a8a, #385988, #535fbd); /* Gradient background */
+    background: linear-gradient(135deg, #5b2c83, #383a8a, #385988, #535fbd); 
     background-size: 600% 600%;
-    animation: gradientShift 60s ease infinite;
+    animation: gradientShift 45s ease infinite;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .tealText {
-    color: #50b3f4; /* Teal text color */
+    color: #50b3f4;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-top: 10px;
 }
 
 /* Animation for shifting gradient */
@@ -35,100 +57,161 @@ html, body {
     }
 }
 
-/* Top Bar Styles */
+/* Navigation Bar */
 .top-bar {
     color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 15px 20px;
     align-items: center;
     width: 100%;
-    max-width: 100vw; /* Prevent the top bar from overflowing */
-    position: fixed; /* Fixed on scroll */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    box-sizing: border-box; /* Ensure padding is accounted for */
-    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurred background */
+    box-sizing: border-box; /* Ensure proper sizing */
 }
 
+/* Logo hover effect */
 .top-bar .logo a {
     color: #fff;
-    font-size: 1.7rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 2rem; /* Slightly larger font */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 .top-bar .logo a:hover {
-    color: #50b3f4; /* Teal hover color */
+    color: #50b3f4; /* Teal hover color for the logo */
 }
 
+/* Navigation Bar Links */
 .top-bar .menu {
     list-style: none;
     margin: 0;
-    padding-left: 1rem;
+    padding: 0;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .top-bar .menu li a {
     color: #fff;
-    text-decoration: none;
     font-size: 1rem;
-    white-space: nowrap; /* Prevent wrapping of individual items */
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth transition for links */
 }
 
 .top-bar .menu li a:hover {
-    color: #50b3f4; /* Teal hover color */
+    color: #50b3f4; /* Teal hover color for links */
 }
 
-/* Main Content Area */
+/* Hamburger Menu Icon for Mobile */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Mobile Responsive Menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Dark background for mobile menu */
+    }
+
+    .menu li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu {
+        display: flex; /* Show menu on toggle */
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger icon */
+    }
+}
+
+/* Main Content */
 main {
     flex: 1;
-    padding: 100px 20px; /* Prevent overlap with the fixed navbar */
+    padding: 150px 20px 40px;
     background: transparent;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     color: #ccc;
     text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
+    padding: 20px 0;
+    font-size: 0.9rem;
     width: 100%;
-    position: relative;
-    z-index: 10; /* Keep above other content */
 }
 
-/* Divider (hr) Styling */
-hr {
-    width: 100%;
-    border: none;
-    height: 2px;
-    background-color: #555;
-    margin: 20px 0;
+/* CTA Button Styling */
+.cta {
+    margin-top: 50px; /* Added space between the text and button */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .top-bar .menu {
-        display: none; /* Hide the menu on smaller screens */
-    }
-    
-    .top-bar {
-        flex-direction: column;
-    }
-
-    main {
-        padding: 80px 10px; /* Adjust padding on smaller screens */
-    }
+.cta-button {
+    background-color: rgba(255, 255, 255, 0.3); /* Lightened semi-transparent background */
+    color: #fff; /* White text */
+    padding: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.4); /* Lightened border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow to lift the button */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
 }
 
-@media (max-width: 1200px) {
-    .top-bar .menu li a {
-        font-size: 0.9rem;
-    }
+.cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* More opaque on hover */
+    color: #000; /* Change text to black for contrast */
+    transform: translateY(-3px); /* Slight upward movement on hover */
 }
+
+/* Portfolio Preview Section Styles */
+.portfolio-preview {
+    padding: 50px 20px;
+}
+
+.project-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    color: #fff;
+}
+
+.project a {
+    color: #50b3f4;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
