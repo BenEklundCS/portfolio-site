@@ -29,19 +29,20 @@ h1, h2, h3, p {
 
 .hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 200px 20px; /* Adjust padding for better spacing */
+    animation: flyInDown 1s ease-out; /* Add animation */
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem; /* Adjust font size for prominence */
     font-weight: bold;
     color: #fff;
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.75rem; /* Larger font size for readability */
     color: #ccc;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 /* Animation for shifting gradient */
@@ -107,6 +108,11 @@ h1, h2, h3, p {
     color: #50b3f4; /* Teal hover color for links */
 }
 
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    filter: brightness(1.2); /* Slightly brighten on hover */
+}
+
 /* Hamburger Menu Icon for Mobile */
 .menu-icon {
     display: none;
@@ -115,20 +121,35 @@ h1, h2, h3, p {
     cursor: pointer;
 }
 
-#menu-toggle {
+/* Hide the menu by default (on small screens) */
+.menu {
     display: none;
+}
+
+/* Show the menu when the checkbox is checked */
+#menu-toggle:checked ~ .menu {
+    visibility: visible;
+    opacity: 1;
+    max-height: 300px; /* Set a max-height that fits your menu content */
 }
 
 /* Mobile Responsive Menu */
 @media (max-width: 768px) {
     .menu {
-        display: none;
         flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9); /* Dark background for mobile */
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9); /* Dark background for mobile menu */
+    }
+
+    .menu {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
     }
 
     .menu li {
@@ -136,13 +157,18 @@ h1, h2, h3, p {
         text-align: center;
     }
 
-    #menu-toggle:checked + .menu {
-        display: flex; /* Show menu on toggle */
-    }
-
+    /* Show hamburger icon */
     .menu-icon {
-        display: block; /* Show hamburger icon */
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #fff;
     }
+}
+
+/* Hide the checkbox itself */
+#menu-toggle {
+    display: none;
 }
 
 /* Main Content */
@@ -160,6 +186,55 @@ footer {
     padding: 20px 0;
     font-size: 0.9rem;
     width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px; /* Adds space between icons and footer text */
+}
+
+/* Social Media Icon Styling */
+.social-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    filter: brightness(1.2); /* Slightly brighten on hover */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .social-links {
+        order: -1; /* Moves the social media icons to the top of the footer */
+        justify-content: center; /* Centers the icons on mobile */
+    }
+}
+
+/* Larger screen adjustments */
+@media (min-width: 769px) {
+    footer {
+        flex-direction: column; /* Keep the content stacked in the center */
+    }
+
+    .social-links {
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+        margin-bottom: 0; /* Remove bottom margin */
+        justify-content: flex-start; /* Align icons to the left */
+    }
 }
 
 /* CTA Button Styling */
@@ -182,36 +257,18 @@ footer {
 
 .cta-button:hover {
     background-color: rgba(255, 255, 255, 0.6); /* More opaque on hover */
-    color: #000; /* Change text to black for contrast */
+    color: #50b3f4; /* Change text to black for contrast */
     transform: translateY(-3px); /* Slight upward movement on hover */
 }
 
-/* Portfolio Preview Section Styles */
-.portfolio-preview {
-    padding: 50px 20px;
+/* Animation for the hero card */
+@keyframes flyInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-1000px); /* Start from the top */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
 }
-
-.project-grid {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.project {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    color: #fff;
-}
-
-.project a {
-    color: #50b3f4;
-    text-decoration: none;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
-

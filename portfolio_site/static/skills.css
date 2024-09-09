@@ -1,0 +1,79 @@
+/* Base styling consistent with the About page */
+/* Main Content */
+main {
+    flex: 1;
+    padding: 75px 20px 0px; /* Reduce the top padding from 150px to 100px */
+    background: transparent;
+}
+
+
+.skills-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background like the about-card */
+    border-radius: 10px;
+    color: #fff;
+    animation: flyInDown 1s ease-out; /* Add animation */
+}
+
+.skills-section h2, .skills-section h3 {
+    color: #50b3f4;
+    margin-bottom: 15px;
+    font-size: 2.5rem; /* Larger subheadings */
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px; /* Space between each section */
+ }
+
+.skills-section h3 {
+    margin-top: 30px; /* Give more breathing room above each section */
+}
+
+.skills-section p {
+    font-size: 1.1rem; /* A little smaller for normal text */
+}
+
+.skills-section li {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    padding-left: 25px;
+    position: relative;
+}
+ 
+/* Hover effect for the card */
+.skills-section:hover {
+    transform: translateY(-5px); /* Slight hover lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.skills-section li::before {
+    content: "•";
+    color: #50b3f4;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.skills-section, .education-section, .certifications-section {
+    padding: 50px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 15px 20px;
+    }
+
+    .skills-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills-section li {
+        font-size: 1rem;
+    }
+}
+
