@@ -1,12 +1,27 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Skills{% endblock %}
+
+{% block head %}
+    <!-- Load the separate CSS for the about page -->
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="contact-info-section">
     <h2>My Contact Information</h2>
     <ul>
-        
+        <li><strong>Email:</strong>
+            <a href="mailto: eklundbenjaminj@gmail.com">eklundbenjaminj@gmail.com</a>
+        </li>
+        <li><strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/ben-eklund-452264198/" target="_blank">Benjamin Eklund</a>
+        </li>
+        <li><strong>GitHub:</strong>
+            <a href="https://github.com/BenEklundCS">BenEklundCS</a>
+        </li>
     </ul>
 </div>
 {% endblock %}

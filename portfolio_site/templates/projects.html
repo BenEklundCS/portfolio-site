@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Projects{% endblock %}
+
+{% block head %}
+    <!-- Load the separate CSS for the projects page -->
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="projects-section">
@@ -8,10 +15,10 @@
     
     <!-- The Land of Boars Project -->
     <section>
-        <h3>The Land of Boars (Platformer Game in C++ with Raylib)</h3>
+        <h3>The Land of Boars | Platformer Game in C++ with Raylib | (WIP)</h3>
         <p><strong>Description:</strong></p>
         <p>
-            <em>The Land of Boars</em> is a 2D platformer game built in C++ using the Raylib library. This project involves implementing various game mechanics, including player movement, collision detection, animation handling, and sound management, all organized through Object-Oriented Programming (OOP) principles.
+            <em>The Land of Boars</em> is a work in progress 2D platformer game built in C++ using the Raylib library. This project involves implementing various game mechanics, including player movement, collision detection, animation handling, and sound management, all organized through Object-Oriented Programming (OOP) principles.
         </p>
         <p><strong>Key Features:</strong></p>
         <ul>
@@ -29,14 +36,12 @@
         <a href="https://github.com/BenEklundCS/The-Land-of-Boars" target="_blank">View on GitHub</a>
     </section>
 
-    <hr>
-
     <!-- Slconwaysgol Project -->
     <section>
-        <h3>SlConwaysGoL (Conway’s Game of Life in Java with LWJGL)</h3>
+        <h3>SlConwaysGoL | Conway’s Game of Life in Java with LWJGL</h3>
         <p><strong>Description:</strong></p>
         <p>
-            <em>SlConwaysGoL</em> is a personal interpretation of Conway's Game of Life, implemented in Java using the <strong>Lightweight Java Game Library (LWJGL)</strong>. While originally a class project, it was extended and optimized for enhanced performance and graphical display.
+            <em>SlConwaysGoL</em> is a personal interpretation of Conway's Game of Life, implemented in Java using the <strong>Lightweight Java Game Library (LWJGL)</strong>. While originally an academic project, it was extended and optimized for enhanced performance with additional features.
         </p>
         <p><strong>Key Features:</strong></p>
         <ul>
@@ -44,6 +49,7 @@
             <li>Used <strong>LWJGL</strong> for rendering the grid and updating the simulation in real-time.</li>
             <li>Implemented user interactions to modify grid states, allowing for dynamic game environments.</li>
             <li>Focused on optimizing grid updates to ensure minimal computational load during complex transitions.</li>
+            <li>Implemented and save and load from-file system that works with any size of grid.</li>
         </ul>
         <p><strong>Skills and Technologies:</strong></p>
         <ul>
@@ -53,10 +59,8 @@
         <a href="https://github.com/BenEklundCS/SlConwaysGoL" target="_blank">View on GitHub</a>
     </section>
 
-    <hr>
-
-    <!-- Geo Project -->
-    <section>
+    <!-- Geo Project (Publish complete version after senior project) -->
+    <!--<section>
         <h3>Geo Project for The State of California (Senior Project)</h3>
         <p><strong>Description:</strong></p>
         <p>
@@ -71,22 +75,44 @@
             <li><strong>Languages/Tools:</strong> Python, Django, PostgreSQL, GIS, Azure, Map APIs</li>
             <li><strong>Key Concepts:</strong> Data visualization, geospatial analysis, full-stack development, team collaboration</li>
         </ul>
-    </section>
+    </section>-->
 
+    <!-- Portfolio Website Project -->
+    <section>
+        <h3>Portfolio Website | Django & Custom CSS</h3>
+        <p><strong>Description:</strong></p>
+        <p>
+            This personal portfolio website was created to showcase my projects, skills, and experience. The site was built using Django for the backend and custom CSS for styling. The goal was to create a professional and visually cohesive platform to present my work, while ensuring responsiveness and usability across devices.
+        </p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Designed a fully responsive layout using custom CSS, ensuring compatibility across desktop, tablet, and mobile devices.</li>
+            <li>Integrated a clean and simple navigation system with a dynamic projects section.</li>
+            <li>Used Django's templating system to manage reusable components across pages efficiently.</li>
+            <li>Incorporated subtle animations and transitions for a smooth user experience.</li>
+        </ul>
+        <p><strong>Skills and Technologies:</strong></p>
+        <ul>
+            <li><strong>Languages/Tools:</strong> Django, Python, HTML, CSS, GitHub</li>
+            <li><strong>Key Concepts:</strong> Web development, responsive design, deployment, version control</li>
+        </ul>
+        <a href="https://github.com/BenEklundCS/portfolio-site" target="_blank">View on GitHub</a>
+    </section>
 
     <section>
-        <h3>Summary</h3>
-        <p>Each project is crafted to emphasize my skills in 
-            game development, 
-            real-time systems, and 
-            full-stack development. 
-            As I complete the Health Geo project, I will gain further hands-on experience with geospatial 
-            tools and backend systems, preparing me for software engineering roles in both private and public sectors.
+        <h3>Summary:</h3>
+        <p>
+            Throughout my projects, I have built expertise in game development, real-time systems, and full-stack web development. Each project showcases a combination of problem-solving abilities, creativity, and technical skills:
         </p>
-        
+        <ul>
+            <li><strong>Game Development:</strong> I’ve developed complex game logic using languages such as C++ and Java, focusing on optimizing performance and enhancing player interactions with event-driven programming techniques and design patterns like Observer and Command.</li>
+            <li><strong>Real-Time Systems:</strong> I’ve worked on optimizing game loops, real-time rendering, and performance efficiency, such as improving Conway’s Game of Life for high computational efficiency with large grids.</li>
+            <li><strong>Full-Stack Development:</strong> My portfolio site demonstrates my proficiency in creating scalable, responsive web applications using Django, CSS, and HTML, with a focus on clean, reusable code and modern design principles.</li>
+        </ul>
+        <p>
+            Moving forward, I am excited to expand my skills through the upcoming Health Geo project, where I will gain further hands-on experience with geospatial tools, data visualization, and full-stack development, positioning myself for software engineering roles in both private and public sectors.
+        </p>
     </section>
-
-    <hr>
     
 </div>
 {% endblock %}
