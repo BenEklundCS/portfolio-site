@@ -62,10 +62,16 @@ h1, h2, h3, p {
     margin: 0;
 }
 
+/* Ensure the hero section takes full height of the screen */
 .hero {
     text-align: center;
-    padding: 200px 20px; /* Adjust padding for better spacing */
-    animation: flyInDown 1s ease-out; /* Add animation */
+    padding: 0 20px; /* Remove large padding to avoid content overflow on small screens */
+    height: 50vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: flyInDown 1s ease-out;
 }
 
 .hero h1 {
@@ -273,8 +279,9 @@ footer {
 }
 
 /* CTA Button Styling */
+
 .cta {
-    margin-top: 50px; /* Added space between the text and button */
+    margin-top: 20px;
 }
 
 .cta-button {
