@@ -1,3 +1,5 @@
+/* Main Styles */
+
 html,body {
     height:100%;
     margin:0;
@@ -79,6 +81,8 @@ h1,h2,h3,p {
     color:#ccc;
     margin-top:15px
 }
+
+/* Background Animation */
     
 @keyframes gradientShift {
     0% {
@@ -93,6 +97,8 @@ h1,h2,h3,p {
         background-position:0 50%
     }
 }
+
+/* Top Bar */
     
 .top-bar {
     color:#fff;
@@ -166,34 +172,6 @@ h1,h2,h3,p {
     max-height:300px
 }
     
-@media (max-width: 768px) {
-    .menu {
-        flex-direction:column;
-        background-color:#000000e6;
-        position:absolute;
-        top:60px;
-        left:0;
-        width:100%;
-        visibility:hidden;
-        opacity:0;
-        max-height:0;
-        overflow:hidden;
-        transition:max-height .3s ease-out,opacity .3s ease-out,visibility .3s ease-out
-    }
-    
-        .menu li {
-        padding:15px;
-        text-align:center
-    }
-    
-    .menu-icon {
-        display:block;
-        cursor:pointer;
-        font-size:2rem;
-        color:#fff
-    }
-}
-    
 #menu-toggle {
     display:none
 }
@@ -203,6 +181,8 @@ main {
     padding:150px 20px 40px;
     background:transparent
 }
+
+/* Footer */
     
 footer {
     background-color:#000000b3;
@@ -216,6 +196,8 @@ footer {
     flex-direction:column;
     align-items:center
 }
+
+/* Social Links */
     
 .social-links {
     display:flex;
@@ -232,19 +214,10 @@ footer {
     transform:scale(1.1);
     filter:brightness(1.2)
 }
+
+/* Responsive Styling */
     
-@media (max-width: 768px) {
-    footer {
-        flex-direction:column
-    }
-    
-    .social-links {
-        order:-1;
-        justify-content:center
-    }
-}
-    
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     footer {
         flex-direction:column
     }
@@ -256,7 +229,35 @@ footer {
         margin-bottom:0;
         justify-content:flex-start
     }
+
+    .menu {
+        flex-direction:column;
+        background-color:#000000e6;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        visibility:hidden;
+        opacity:0;
+        max-height:0;
+        overflow:hidden;
+        transition:max-height .3s ease-out,opacity .3s ease-out,visibility .3s ease-out
+    }
+    
+    .menu li {
+        padding:15px;
+        text-align:center
+    }
+    
+    .menu-icon {
+        display:block;
+        cursor:pointer;
+        font-size:2rem;
+        color:#fff
+    }
 }
+
+/* Call to Action */
     
 .cta {
     margin-top:75px
@@ -280,6 +281,8 @@ footer {
     color:#50b3f4;
     transform:translateY(-3px)
 }
+
+/* Animations */
     
 @keyframes flyInDown {
     0% {
@@ -316,6 +319,8 @@ footer {
         transform:translateX(0)
     }
 }
+
+/* Scrollbar Styling */
     
 ::-webkit-scrollbar {
     width:8px;
