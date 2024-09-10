@@ -6,7 +6,7 @@ html, body {
     display: flex;
     flex-direction: column;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Changed to Roboto */
     box-sizing: border-box;
     background: linear-gradient(135deg, #5b2c83, #383a8a, #385988, #535fbd); 
     background-size: 600% 600%;
@@ -19,6 +19,8 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+
+
 
 /* Create polygonal shapes */
 body::before {
@@ -117,14 +119,17 @@ h1, h2, h3, p {
     box-sizing: border-box; /* Ensure proper sizing */
 }
 
-/* Logo hover effect */
+
+/* Style for the // BEN header */
 .top-bar .logo a {
-    color: #fff;
-    font-size: 2rem; /* Slightly larger font */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: color 0.3s ease; /* Smooth transition */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Make it bold */
+    font-size: 2.5rem; /* Slightly larger to make it stand out */
+    letter-spacing: 3px; /* Increase the letter spacing for better visual appeal */
+    transition: color 0.3s ease; /* Smooth hover transition */
+    opacity: 0.8; /* Slightly transparent for a subtle effect */
 }
+
 
 .top-bar .logo a:hover {
     color: #50b3f4; /* Teal hover color for the logo */
@@ -137,10 +142,12 @@ h1, h2, h3, p {
     padding: 0;
     display: flex;
     gap: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .top-bar .menu li a {
     color: #fff;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     transition: color 0.3s ease; /* Smooth transition for links */
 }
@@ -281,7 +288,8 @@ footer {
 /* CTA Button Styling */
 
 .cta {
-    margin-top: 20px;
+    margin-top: 75px;
+
 }
 
 .cta-button {
