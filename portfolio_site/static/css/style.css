@@ -216,20 +216,8 @@ footer {
 }
 
 /* Responsive Styling */
-    
-@media (min-width: 768px) {
-    footer {
-        flex-direction:column
-    }
-    
-    .social-links {
-        position:absolute;
-        left:20px;
-        bottom:10px;
-        margin-bottom:0;
-        justify-content:flex-start
-    }
 
+@media (max-width: 769px) {
     .menu {
         flex-direction:column;
         background-color:#000000e6;
@@ -254,6 +242,20 @@ footer {
         cursor:pointer;
         font-size:2rem;
         color:#fff
+    }
+}
+    
+@media (min-width: 768px) {
+    footer {
+        flex-direction:column
+    }
+    
+    .social-links {
+        position:absolute;
+        left:20px;
+        bottom:10px;
+        margin-bottom:0;
+        justify-content:flex-start
     }
 }
 
