@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Ben's Portfolio{% endblock %}</title>
     
-    <!-- Load default styles (common styles for all pages) -->
+    <!-- Load common styles for all pages -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
     <!-- Load fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Block for additional head content per page -->
     {% block head %}{% endblock %}
 </head>
 <body>
@@ -33,8 +35,6 @@
         </ul>
     </nav>
     
-    
-
     <!-- Main Content Area -->
     <main>
         {% block content %}{% endblock %}

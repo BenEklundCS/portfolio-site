@@ -1,384 +1,343 @@
-/* Global Styles */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    font-family: 'Roboto', sans-serif; /* Changed to Roboto */
-    box-sizing: border-box;
-    background: linear-gradient(135deg, #5b2c83, #383a8a, #385988, #535fbd); 
-    background-size: 600% 600%;
-    animation: gradientShift 45s ease infinite;
-    overflow-x: hidden;
+html,body {
+    height:100%;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    color:#fff;
+    font-family:'Roboto',sans-serif;
+    box-sizing:border-box;
+    background:linear-gradient(135deg,#5b2c83,#383a8a,#385988,#535fbd);
+    background-size:600% 600%;
+    animation:gradientShift 45s ease infinite;
+    overflow-x:hidden
 }
-
+    
 body {
-    background-color: #2b2b2b; /* Set a base dark background color */
-    position: relative;
-    overflow-x: hidden;
+    background-color:#2b2b2b;
+    position:relative;
+    overflow-x:hidden
 }
-
-
-
-/* Create polygonal shapes */
+    
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50px;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(135deg, rgba(255,255,255,0.03) 25%, transparent 25%) -50px 0,
-                linear-gradient(225deg, rgba(255,255,255,0.03) 25%, transparent 25%) -50px 0,
-                linear-gradient(315deg, rgba(255,255,255,0.03) 25%, transparent 25%),
-                linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%);
-    background-size: 100px 100px;
-    z-index: -1;
-    opacity: 0.3; /* Adjust for subtlety */
+    content:"";
+    position:absolute;
+    top:0;
+    left:-50px;
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(135deg,#ffffff08 25%,transparent 25%) -50px 0,linear-gradient(225deg,#ffffff08 25%,transparent 25%) -50px 0,linear-gradient(315deg,#ffffff08 25%,transparent 25%),linear-gradient(45deg,#ffffff08 25%,transparent 25%);
+    background-size:100px 100px;
+    z-index:-1;
+    opacity:.3
 }
-
+    
 body::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 60vw;
-    height: 60vh;
-    background: rgba(255, 255, 255, 0.05);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    z-index: -1;
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:60vw;
+    height:60vh;
+    background:#ffffff0d;
+    clip-path:polygon(0 0,100% 0,100% 100%,0% 100%);
+    z-index:-1
 }
-
+    
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration:none;
+    color:inherit
 }
-
+    
 .tealText {
-    color: #50b3f4;
+    color:#50b3f4
 }
-
-h1, h2, h3, p {
-    margin: 0;
+    
+h1,h2,h3,p {
+    margin:0
 }
-
-/* Ensure the hero section takes full height of the screen */
+    
 .hero {
-    text-align: center;
-    padding: 0 20px; /* Remove large padding to avoid content overflow on small screens */
-    height: 50vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    animation: flyInDown 1s ease-out;
+    text-align:center;
+    padding:0 20px;
+    height:50vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation:flyInDown 1s ease-out
 }
-
+    
 .hero h1 {
-    font-size: 4rem; /* Adjust font size for prominence */
-    font-weight: bold;
-    color: #fff;
+    font-size:4rem;
+    font-weight:700;
+    color:#fff
 }
-
+    
 .hero p {
-    font-size: 1.75rem; /* Larger font size for readability */
-    color: #ccc;
-    margin-top: 15px;
+    font-size:1.75rem;
+    color:#ccc;
+    margin-top:15px
 }
-
-/* Animation for shifting gradient */
+    
 @keyframes gradientShift {
     0% {
-        background-position: 0% 50%;
+        background-position:0 50%
     }
+    
     50% {
-        background-position: 100% 50%;
+        background-position:100% 50%
     }
+    
     100% {
-        background-position: 0% 50%;
+        background-position:0 50%
     }
 }
-
-/* Navigation Bar */
+    
 .top-bar {
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
-    align-items: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Blurred background */
-    box-sizing: border-box; /* Ensure proper sizing */
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 20px;
+    align-items:center;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:10;
+    background-color:#000000b3;
+    backdrop-filter:blur(10px);
+    box-sizing:border-box
 }
-
-
-/* Style for the // BEN header */
+    
 .top-bar .logo a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700; /* Make it bold */
-    font-size: 2.5rem; /* Slightly larger to make it stand out */
-    letter-spacing: 3px; /* Increase the letter spacing for better visual appeal */
-    transition: color 0.3s ease; /* Smooth hover transition */
-    opacity: 0.8; /* Slightly transparent for a subtle effect */
+    font-family:'Roboto',sans-serif;
+    font-weight:700;
+    font-size:2.5rem;
+    letter-spacing:3px;
+    transition:color .3s ease;
+    opacity:.8
 }
-
-
+    
 .top-bar .logo a:hover {
-    color: #50b3f4; /* Teal hover color for the logo */
+    color:#50b3f4
 }
-
-/* Navigation Bar Links */
+    
 .top-bar .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    font-family: 'Roboto', sans-serif;
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    gap:20px;
+    font-family:'Roboto',sans-serif
 }
-
+    
 .top-bar .menu li a {
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    transition: color 0.3s ease; /* Smooth transition for links */
+    color:#fff;
+    font-family:'Roboto',sans-serif;
+    font-size:1rem;
+    transition:color .3s ease
 }
-
+    
 .top-bar .menu li a:hover {
-    color: #50b3f4; /* Teal hover color for links */
+    color:#50b3f4
 }
-
+    
 .social-icon:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    filter: brightness(1.2); /* Slightly brighten on hover */
+    transform:scale(1.1);
+    filter:brightness(1.2)
 }
-
-/* Hamburger Menu Icon for Mobile */
+    
 .menu-icon {
-    display: none;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
+    display:none;
+    font-size:2rem;
+    color:#fff;
+    cursor:pointer
 }
-
-/* Hide the menu by default (on small screens) */
+    
 .menu {
-    display: none;
+    display:none
 }
-
-/* Show the menu when the checkbox is checked */
+    
 #menu-toggle:checked ~ .menu {
-    visibility: visible;
-    opacity: 1;
-    max-height: 300px; /* Set a max-height that fits your menu content */
+    visibility:visible;
+    opacity:1;
+    max-height:300px
 }
-
-/* Mobile Responsive Menu */
+    
 @media (max-width: 768px) {
     .menu {
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9); /* Dark background for mobile */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
+        flex-direction:column;
+        background-color:#000000e6;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        visibility:hidden;
+        opacity:0;
+        max-height:0;
+        overflow:hidden;
+        transition:max-height .3s ease-out,opacity .3s ease-out,visibility .3s ease-out
     }
-
-    .menu {
-        visibility: hidden;
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+    
+        .menu li {
+        padding:15px;
+        text-align:center
     }
-
-    .menu li {
-        padding: 15px;
-        text-align: center;
-    }
-
-    /* Show hamburger icon */
+    
     .menu-icon {
-        display: block;
-        cursor: pointer;
-        font-size: 2rem;
-        color: #fff;
+        display:block;
+        cursor:pointer;
+        font-size:2rem;
+        color:#fff
     }
 }
-
-/* Hide the checkbox itself */
+    
 #menu-toggle {
-    display: none;
+    display:none
 }
-
-/* Main Content */
+    
 main {
-    flex: 1;
-    padding: 150px 20px 40px;
-    background: transparent;
+    flex:1;
+    padding:150px 20px 40px;
+    background:transparent
 }
-
-/* Footer */
+    
 footer {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: #ccc;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color:#000000b3;
+    color:#ccc;
+    text-align:center;
+    padding:20px 0;
+    font-size:.9rem;
+    width:100%;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center
 }
-
-/* Social Media Links */
+    
 .social-links {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 10px; /* Adds space between icons and footer text */
+    display:flex;
+    gap:15px;
+    margin-bottom:10px
 }
-
-/* Social Media Icon Styling */
+    
 .social-icon img {
-    width: 30px;
-    height: 30px;
+    width:30px;
+    height:30px
 }
-
+    
 .social-icon:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    filter: brightness(1.2); /* Slightly brighten on hover */
+    transform:scale(1.1);
+    filter:brightness(1.2)
 }
-
-/* Mobile adjustments */
+    
 @media (max-width: 768px) {
     footer {
-        flex-direction: column;
+        flex-direction:column
     }
-
+    
     .social-links {
-        order: -1; /* Moves the social media icons to the top of the footer */
-        justify-content: center; /* Centers the icons on mobile */
+        order:-1;
+        justify-content:center
     }
 }
-
-/* Larger screen adjustments */
+    
 @media (min-width: 769px) {
     footer {
-        flex-direction: column; /* Keep the content stacked in the center */
+        flex-direction:column
     }
-
+    
     .social-links {
-        position: absolute;
-        left: 20px;
-        bottom: 10px;
-        margin-bottom: 0; /* Remove bottom margin */
-        justify-content: flex-start; /* Align icons to the left */
+        position:absolute;
+        left:20px;
+        bottom:10px;
+        margin-bottom:0;
+        justify-content:flex-start
     }
 }
-
-/* CTA Button Styling */
-
+    
 .cta {
-    margin-top: 75px;
-
+    margin-top:75px
 }
-
+    
 .cta-button {
-    background-color: rgba(255, 255, 255, 0.3); /* Lightened semi-transparent background */
-    color: #fff; /* White text */
-    padding: 15px 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 2px solid rgba(255, 255, 255, 0.4); /* Lightened border */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow to lift the button */
-    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    background-color:#ffffff4d;
+    color:#fff;
+    padding:15px 30px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:700;
+    border-radius:5px;
+    border:2px solid #fff6;
+    box-shadow:0 4px 10px #0003;
+    transition:background-color .3s ease,transform .2s ease,color .3s ease
 }
-
+    
 .cta-button:hover {
-    background-color: rgba(255, 255, 255, 0.6); /* More opaque on hover */
-    color: #50b3f4; /* Change text to black for contrast */
-    transform: translateY(-3px); /* Slight upward movement on hover */
+    background-color:#fff9;
+    color:#50b3f4;
+    transform:translateY(-3px)
 }
-
-/* Animation for the hero card */
+    
 @keyframes flyInDown {
     0% {
-        opacity: 0;
-        transform: translateY(-1000px); /* Start from the top */
+        opacity:0;
+        transform:translateY(-1000px)
     }
+    
     100% {
-        opacity: 1;
-        transform: translateY(0); /* End at the original position */
+        opacity:1;
+        transform:translateY(0)
     }
 }
-
-/* Animation for the about cards */
+    
 @keyframes flyIn {
     0% {
-        opacity: 0;
-        transform: translateX(-1000px); /* Start from the left side */
+        opacity:0;
+        transform:translateX(-1000px)
     }
+    
     100% {
-        opacity: 1;
-        transform: translateX(0); /* End at the original position */
+        opacity:1;
+        transform:translateX(0)
     }
 }
-
+    
 @keyframes flyInRight {
     0% {
-        opacity: 0;
-        transform: translateX(1000px); /* Start from the right side */
+        opacity:0;
+        transform:translateX(1000px)
     }
+    
     100% {
-        opacity: 1;
-        transform: translateX(0); /* End at the original position */
+        opacity:1;
+        transform:translateX(0)
     }
 }
-
-/* scrollbars */
-
-/* Minimal Scrollbar Styling for WebKit Browsers (Chrome, Safari) */
+    
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width:8px;
+    height:8px
 }
-
+    
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1); /* Minimal background for the scrollbar track */
-    border-radius: 10px;
+    background:#ffffff1a;
+    border-radius:10px
 }
-
+    
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.3); /* Minimal color for the scrollbar thumb */
-    border-radius: 10px;
-    border: 2px solid transparent; /* Add a border to create space around the thumb */
+    background-color:#ffffff4d;
+    border-radius:10px;
+    border:2px solid transparent
 }
-
+    
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Slight color change on hover */
+    background-color:#ffffff80
 }
-
-/* Minimal Scrollbar for Firefox */
+    
 * {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+    scrollbar-width:thin;
+    scrollbar-color:#ffffff4d #ffffff1a
 }
-
-/* Apply the scrollbar style specifically to the project section if needed */
-.projects-section {
-    overflow-y: auto; /* Ensure the project section is scrollable if needed */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
-}
-

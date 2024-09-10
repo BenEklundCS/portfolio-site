@@ -1,89 +1,82 @@
-/* Container for the cards */
 .skills-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns layout */
-    grid-template-rows: auto auto;
-    gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto auto;
+    gap:40px;
+    max-width:1400px;
+    margin:0 auto
 }
-
-/* Skills Section (Large Card) */
+    
 .skills-card {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 40px;
-    border-radius: 10px;
-    grid-column: 1 / 2; /* Take up the left column */
-    grid-row: 1 / 3; /* Span across both rows */
-    color: #fff;
-    animation: flyIn 1s ease-out;
+    background-color:#000c;
+    padding:40px;
+    border-radius:10px;
+    grid-column:1 / 2;
+    grid-row:1 / 3;
+    color:#fff;
+    animation:flyIn 1s ease-out
 }
-
-/* Education and Certifications (Smaller Cards) */
-.education-card, .certifications-card {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 40px;
-    border-radius: 10px;
-    grid-column: 2 / 3; /* Right column */
-    color: #fff;
-    animation: flyInRight 1s ease-out;
+    
+.education-card,.certifications-card {
+    background-color:#000c;
+    padding:40px;
+    border-radius:10px;
+    grid-column:2 / 3;
+    color:#fff;
+    animation:flyInRight 1s ease-out
 }
-
+    
 .education-card {
-    grid-row: 1 / 2; /* First row on the right */
+    grid-row:1 / 2
 }
-
+    
 .certifications-card {
-    grid-row: 2 / 3; /* Second row on the right */
+    grid-row:2 / 3
 }
-
-/* Card Headings */
-.skills-card h3, .education-card h3, .certifications-card h3 {
-    color: #50b3f4;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    
+.skills-card h3,.education-card h3,.certifications-card h3 {
+    color:#50b3f4;
+    margin-bottom:20px;
+    font-size:1.8rem
 }
-
-/* List Styling */
-.skills-card ul, .education-card ul, .certifications-card ul {
-    list-style: disc outside;
-    padding-left: 20px;
-    margin-bottom: 15px;
+    
+.skills-card ul,.education-card ul,.certifications-card ul {
+    list-style:disc outside;
+    padding-left:20px;
+    margin-bottom:15px
 }
-
-.skills-card li, .education-card li, .certifications-card li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    padding-left: 0;
+    
+.skills-card li,.education-card li,.certifications-card li {
+    font-size:1rem;
+    margin-bottom:10px;
+    padding-left:0
 }
-
-/* Hover effect for the cards */
-.skills-card:hover, .certifications-card:hover, .education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    
+.skills-card:hover,.certifications-card:hover,.education-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px #0000004d
 }
-
-/* Responsive Design */
+    
 @media (max-width: 768px) {
     .skills-container {
-        grid-template-columns: 1fr; /* Stack everything in one column */
-        grid-template-rows: auto;
-        max-width: 100%; /* Ensure it fits smaller screens */
-        padding: 15px;
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+        max-width:100%;
+        padding:15px
     }
-
+    
     .skills-card {
-        grid-column: 1 / 2; /* Full width for the skills card */
-        grid-row: 1 / 2; /* First position */
+        grid-column:1 / 2;
+        grid-row:1 / 2
     }
-
+    
     .education-card {
-        grid-column: 1 / 2; /* Full width for the education card */
-        grid-row: 2 / 3; /* Second position */
+        grid-column:1 / 2;
+        grid-row:2 / 3
     }
-
+    
     .certifications-card {
-        grid-column: 1 / 2; /* Full width for the certifications card */
-        grid-row: 3 / 4; /* Third position */
+    grid-column:1 / 2;
+    grid-row:3 / 4
     }
 }
