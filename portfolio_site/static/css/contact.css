@@ -21,6 +21,7 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    animation: flyInDown 1s ease-out; /* Add animation */
 }
 
 
