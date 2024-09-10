@@ -345,3 +345,40 @@ footer {
         transform: translateX(0); /* End at the original position */
     }
 }
+
+/* scrollbars */
+
+/* Minimal Scrollbar Styling for WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Minimal background for the scrollbar track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* Minimal color for the scrollbar thumb */
+    border-radius: 10px;
+    border: 2px solid transparent; /* Add a border to create space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Slight color change on hover */
+}
+
+/* Minimal Scrollbar for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
+
+/* Apply the scrollbar style specifically to the project section if needed */
+.projects-section {
+    overflow-y: auto; /* Ensure the project section is scrollable if needed */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
+
