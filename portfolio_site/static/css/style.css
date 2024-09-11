@@ -194,7 +194,11 @@ footer {
     position:relative;
     display:flex;
     flex-direction:column;
-    align-items:center
+    align-items:center;
+}
+
+footer p {
+    order: 1; /* Ensure the copyright text comes after the icons */
 }
 
 /* Social Links */
@@ -202,7 +206,9 @@ footer {
 .social-links {
     display:flex;
     gap:15px;
-    margin-bottom:10px
+    margin-bottom:10px;
+    justify-content:center; /* Center the social icons */
+    order: -1; /* Ensure social media icons are on top */
 }
     
 .social-icon img {
