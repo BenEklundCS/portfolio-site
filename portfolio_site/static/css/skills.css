@@ -46,11 +46,13 @@
     margin-bottom:15px
 }
     
-.skills-card li,.education-card li,.certifications-card li {
-    font-size:1rem;
-    margin-bottom:10px;
-    padding-left:0
+.skills-card li, .education-card li, .certifications-card li {
+    font-size: 1rem;
+    margin-bottom: 20px; /* Increased space between bullets */
+    padding-left: 0;
+    line-height: 1.6; /* Increased line height for more readability */
 }
+
     
 .skills-card:hover,.certifications-card:hover,.education-card:hover {
     transform:translateY(-5px);
