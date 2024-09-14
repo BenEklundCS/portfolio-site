@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_browser_reload",
-    'portfolio_site'
+    'portfolio_site',
+    "whitenoise.runserver_nostatic",
 ]
 
 MIDDLEWARE = [
