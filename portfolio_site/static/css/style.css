@@ -21,7 +21,8 @@ html, body {
 body {
     background-color:#2b2b2b;
     position:relative;
-    overflow-x:hidden
+    overflow-x:hidden;
+    min-height: 100vh;
 }
     
 body::before {
@@ -183,7 +184,8 @@ h1,h2,h3,p {
 main {
     flex:1;
     padding:150px 20px 40px;
-    background:transparent
+    background:transparent;
+    flex-grow: 1;
 }
 
 /* Footer */
