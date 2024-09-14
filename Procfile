@@ -1,3 +1,1 @@
-web: gunicorn <portfolio_site>.wsgi --log-file - 
-#or works good with external database
-web: python manage.py migrate && gunicorn <portfolio_site>.wsg
+web: gunicorn portfolio_site.wsgi --log-file -
