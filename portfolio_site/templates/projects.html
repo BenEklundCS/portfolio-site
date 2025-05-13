@@ -11,6 +11,29 @@
 
 {% block content %}
 <div class="projects-section">    
+    <!-- Geo Project (Senior Project) -->
+    <section>
+        <h3>Geo | Full Stack Spatial Data Platform for HCAI | (Senior Project)</h3>
+        <p><strong>Description:</strong></p>
+        <p>
+            <em>Geo</em> is a full-stack web application developed for our senior project, in collaboration with stakeholders focused on public data transparency. It allows users to visualize and interact with geospatial data from across California. The system integrates multiple datasets, enabling geocoding, reverse geocoding, and spatial enrichment, all served through a performant and scalable backend.
+        </p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Built geocoding and reverse geocoding APIs using Azure Maps and custom spatial logic.</li>
+            <li>Processed and imported spatial data from CSVs and shapefiles into PostGIS-enabled PostgreSQL databases.</li>
+            <li>Developed robust RESTful APIs in Django to support real-time query and data exploration.</li>
+            <li>Deployed performant caching with Redis to improve response times for repeated queries.</li>
+            <li>Collaborated on a team using Agile practices to deliver milestones and integrate data pipelines.</li>
+        </ul>
+        <p><strong>Skills and Technologies:</strong></p>
+        <ul>
+            <li><strong>Languages/Tools:</strong> Python, Django, PostgreSQL, PostGIS, Azure Maps, Redis, Git, Docker</li>
+            <li><strong>Key Concepts:</strong> Full-stack development, spatial databases, geocoding, data enrichment, API design</li>
+        </ul>
+        <a href="https://github.com/CAHCAI/Geo" target="_blank">View on GitHub</a>
+    </section>
+
     <!-- The Land of Boars Project -->
     <section>
         <h3>The Land of Boars | Platformer Game in C++ with Raylib | (WIP)</h3>
@@ -58,24 +81,6 @@
         <a href="https://github.com/BenEklundCS/CellularAutomata" target="_blank">View on GitHub</a>
     </section>
 
-    <!-- Geo Project (Publish complete version after senior project) -->
-    <!--<section>
-        <h3>Geo Project for The State of California (Senior Project)</h3>
-        <p><strong>Description:</strong></p>
-        <p>
-            This project is part of a broader effort to map and analyze health data across various geographic locations in California. The goal is to develop a system that helps visualize public health trends and provide insights that could inform state policies.
-        </p>
-        <p><strong>Key Features (Planned):</strong></p>
-        <ul>
-            <li>Design and implement a web-based system for displaying healthcare information using geographic mapping.</li>
-        </ul>
-        <p><strong>Skills and Technologies (Planned):</strong></p>
-        <ul>
-            <li><strong>Languages/Tools:</strong> Python, Django, PostgreSQL, GIS, Azure, Map APIs</li>
-            <li><strong>Key Concepts:</strong> Data visualization, geospatial analysis, full-stack development, team collaboration</li>
-        </ul>
-    </section>-->
-
     <!-- Portfolio Website Project -->
     <section>
         <h3>Portfolio Website | Django & Custom CSS</h3>
@@ -96,28 +101,6 @@
             <li><strong>Key Concepts:</strong> Web development, responsive design, deployment, version control</li>
         </ul>
         <a href="https://github.com/BenEklundCS/portfolio-site" target="_blank">View on GitHub</a>
-    </section>
-
-    <!-- Planet Defender Project -->
-    <section>
-        <h3>Planet Defender | Simple Space Invaders clone in Java with LibGDX</h3>
-        <p><strong>Description:</strong></p>
-        <p>
-            <em>Planet Defender</em> is a space-invaders style game developed in Java using the <strong>LibGDX</strong> framework. This was a simple project to explore game development concepts, focusing on real-time rendering, enemy wave spawning and movement, and player interactions.
-        </p>
-        <p><strong>Key Features:</strong></p>
-        <ul>
-            <li>Implemented a basic game loop for rendering and updating game objects in real-time.</li>
-            <li>Designed enemy wave spawning and movement patterns for strategic gameplay.</li>
-            <li>Developed player controls for movement and shooting, with collision detection for enemy interactions.</li>
-            <li>Used LibGDX for rendering sprites, handling input, and managing game states.</li>
-        </ul>
-        <p><strong>Skills and Technologies:</strong></p>
-        <ul>
-            <li><strong>Languages/Tools:</strong> Java, LibGDX, IntelliJ</li>
-            <li><strong>Key Concepts:</strong> Game development, real-time rendering, collision detection.</li>
-        </ul>
-        <a href="https://github.com/BenEklundCS/Planet-Defender" target="_blank">View on GitHub</a>
     </section>
 </div>
 {% endblock %}
