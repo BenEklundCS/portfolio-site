@@ -27,14 +27,9 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=False)
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['beneklund.com', 'portfolio-site-production-41c1.up.railway.app', '*']
-=======
-ALLOWED_HOSTS = ['beneklund.com', 'www.beneklund.com']
+ALLOWED_HOSTS = ['beneklund.com', 'portfolio-site-production-41c1.up.railway.app']
 
-CSRF_TRUSTED_ORIGINS = ['https://beneklund.com', 'https://www.beneklund.com']
->>>>>>> fd607e787914304fe16f601535d8de44947be52d
-
+CSRF_TRUSTED_ORIGINS = ['https://beneklund.com', 'https://portfolio-site-production-41c1.up.railway.app']
 
 if 'CODESPACE_NAME' in os.environ:
     codespace_name = config("CODESPACE_NAME")
